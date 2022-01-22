@@ -1,5 +1,6 @@
 import sys
 import os
+import math
 import hashlib
 from argparse import ArgumentParser
 from pathlib import Path
@@ -10,7 +11,7 @@ class FileHash:
         self.rootdir = rootdir
         self.fileHashDir = rootdir + "\\.hash"
         self.noError = True
-        self.readSize = 114514
+        self.readSize = int( 114514 * math.log( 1919810, base = math.e ) )
 
 
     def CheckFileStatus( self, file ):
